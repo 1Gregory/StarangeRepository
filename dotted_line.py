@@ -12,12 +12,11 @@ vector = "d-r"  # d-r  d-l  t-r  t-l
 
 
 while not(cursor == [width*10-1, 0] or cursor == [0, height*10-1] or cursor == [width*10-1, height*10-1]):
+    if step == 0:
+        show = not (show)
+        step = 10
     if show:
         canvas[cursor[0], cursor[1]] = (255, 255, 255)
-    if step == 0:
-        show = not(show)
-        step = 10
-
     if vector == "d-r":
         if cursor[1] == height*10-1:
             vector = "t-r"
